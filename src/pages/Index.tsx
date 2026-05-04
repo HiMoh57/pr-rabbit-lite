@@ -146,7 +146,7 @@ const Index = () => {
 
         {review && pr && (
           <Card
-            className="bg-card/70 border-border backdrop-blur-sm overflow-hidden"
+            className="bg-card border-border overflow-hidden"
             style={{ boxShadow: "var(--shadow-card)" }}
           >
             <div className="p-6 border-b border-border flex items-start justify-between gap-4">
