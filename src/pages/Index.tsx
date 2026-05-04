@@ -197,7 +197,7 @@ const Index = () => {
               </div>
 
               <Section
-                icon={<Bug className="h-4 w-4 text-destructive" />}
+                icon={<Bug className="h-4 w-4 text-muted-foreground" />}
                 title="Critical Bugs"
                 empty={!review.critical_bugs.length}
                 emptyText="No critical logical flaws detected."
@@ -208,7 +208,7 @@ const Index = () => {
               </Section>
 
               <Section
-                icon={<Shield className="h-4 w-4 text-warning" />}
+                icon={<Shield className="h-4 w-4 text-muted-foreground" />}
                 title="Security Risks"
                 empty={!review.security_risks.length}
                 emptyText="No exposed keys or vulnerable patterns found."
