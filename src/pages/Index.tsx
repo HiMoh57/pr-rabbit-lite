@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GitPullRequest, Loader2, Bug, Shield, Zap, Copy, Check, Sparkles, AlertTriangle } from "lucide-react";
+import { GitPullRequest, Loader2, Bug, Shield, Zap, Copy, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
-type Bug = { title: string; detail: string; file?: string };
+type BugItem = { title: string; detail: string; file?: string };
 type Risk = { title: string; detail: string; severity: "low" | "medium" | "high" | "critical" };
 type Review = {
   summary: string;
-  critical_bugs: Bug[];
+  critical_bugs: BugItem[];
   security_risks: Risk[];
   efficiency_score: number;
 };
