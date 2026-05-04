@@ -248,12 +248,12 @@ const StatCard = ({
   label: string;
   value: string | number;
   suffix?: string;
-  tone: "primary" | "warning" | "destructive";
+  tone: "success" | "warning" | "destructive";
 }) => {
   const colorMap = {
-    primary: "text-primary border-primary/30 bg-primary/5",
-    warning: "text-warning border-warning/30 bg-warning/5",
-    destructive: "text-destructive border-destructive/30 bg-destructive/5",
+    success: "text-accent border-accent/30 bg-accent/10",
+    warning: "text-warning border-warning/30 bg-warning/10",
+    destructive: "text-destructive border-destructive/30 bg-destructive/10",
   } as const;
   return (
     <div className={`rounded-lg border p-4 ${colorMap[tone]}`}>
