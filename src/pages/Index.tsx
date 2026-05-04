@@ -77,43 +77,35 @@ const Index = () => {
 
   return (
     <div
-      className="min-h-screen text-foreground font-sans antialiased"
-      style={{ background: "var(--gradient-hero), hsl(var(--background))", fontFamily: "Inter, sans-serif" }}
+      className="min-h-screen bg-background text-foreground font-sans antialiased"
+      style={{ backgroundImage: "var(--gradient-hero)", fontFamily: "Inter, sans-serif" }}
     >
-      <header className="border-b border-border/60 backdrop-blur-sm sticky top-0 z-10 bg-background/70">
+      <header className="border-b border-border sticky top-0 z-10 bg-background/80 backdrop-blur">
         <div className="container flex items-center justify-between h-14">
-          <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-md bg-primary/15 flex items-center justify-center ring-1 ring-primary/30">
-              <GitPullRequest className="h-4 w-4 text-primary" />
+          <div className="flex items-center gap-2.5">
+            <div className="h-7 w-7 rounded-md bg-secondary flex items-center justify-center border border-border">
+              <GitPullRequest className="h-3.5 w-3.5 text-foreground" />
             </div>
-            <span className="font-semibold tracking-tight">PR-Rabbit-Lite</span>
-            <Badge variant="secondary" className="ml-2 text-[10px] font-mono">
+            <span className="font-semibold tracking-tight text-sm">PR-Rabbit-Lite</span>
+            <Badge variant="secondary" className="ml-1 text-[10px] font-mono text-muted-foreground border-border">
               v0.1
             </Badge>
           </div>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-          >
+          <span className="text-xs text-muted-foreground hidden sm:block">
             Senior Staff Engineer, on demand
-          </a>
+          </span>
         </div>
       </header>
 
       <main className="container py-16 max-w-3xl">
         <section className="text-center mb-10">
-          <Badge variant="outline" className="mb-4 gap-1.5 border-primary/30 text-primary">
+          <Badge variant="outline" className="mb-5 gap-1.5 border-border text-muted-foreground font-normal">
             <Sparkles className="h-3 w-3" /> Agentic PR Reviews
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            Ship faster.{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Catch bugs sooner.
-            </span>
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4 text-foreground">
+            Ship faster. Catch bugs sooner.
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto text-base">
             Paste any public GitHub PR URL. Get a Senior Staff Engineer's review in seconds — bugs,
             security risks, and an efficiency score.
           </p>
@@ -124,14 +116,13 @@ const Index = () => {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="https://github.com/owner/repo/pull/123"
-            className="h-12 font-mono text-sm bg-card/60 border-border focus-visible:ring-primary"
+            className="h-11 font-mono text-sm bg-card border-border placeholder:text-muted-foreground/60"
             disabled={loading}
           />
           <Button
             type="submit"
             disabled={loading || !url.trim()}
-            className="h-12 px-6 font-medium"
-            style={{ boxShadow: "var(--shadow-glow)" }}
+            className="h-11 px-5 font-medium"
           >
             {loading ? (
               <>
