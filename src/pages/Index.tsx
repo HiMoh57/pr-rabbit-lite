@@ -173,13 +173,13 @@ const Index = () => {
                   icon={<Bug className="h-4 w-4" />}
                   label="Critical Bugs"
                   value={review.critical_bugs.length}
-                  tone={review.critical_bugs.length ? "destructive" : "primary"}
+                  tone={review.critical_bugs.length ? "destructive" : "success"}
                 />
                 <StatCard
                   icon={<Shield className="h-4 w-4" />}
                   label="Security Risks"
                   value={review.security_risks.length}
-                  tone={review.security_risks.length ? "warning" : "primary"}
+                  tone={review.security_risks.length ? "warning" : "success"}
                 />
                 <StatCard
                   icon={<Zap className="h-4 w-4" />}
@@ -188,7 +188,7 @@ const Index = () => {
                   suffix="/100"
                   tone={
                     review.efficiency_score >= 80
-                      ? "primary"
+                      ? "success"
                       : review.efficiency_score >= 50
                       ? "warning"
                       : "destructive"
