@@ -10,89 +10,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark slate dev-tool aesthetic */
-    --background: 222 47% 7%;
-    --foreground: 210 40% 96%;
+    /* Minimal dark — neutral zinc with a single restrained accent */
+    --background: 240 6% 7%;
+    --foreground: 0 0% 96%;
 
-    --card: 222 40% 10%;
-    --card-foreground: 210 40% 96%;
+    --card: 240 5% 9%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 222 40% 10%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 240 5% 9%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 152 76% 50%;
-    --primary-foreground: 222 47% 7%;
+    /* Off-white primary for high contrast minimal buttons */
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 6% 8%;
 
-    --secondary: 217 33% 14%;
-    --secondary-foreground: 210 40% 96%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 217 33% 13%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 240 5% 12%;
+    --muted-foreground: 240 4% 65%;
 
-    --accent: 199 89% 55%;
-    --accent-foreground: 222 47% 7%;
+    /* Single restrained accent: soft emerald */
+    --accent: 152 55% 55%;
+    --accent-foreground: 240 6% 8%;
 
-    --destructive: 0 72% 55%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --warning: 38 92% 55%;
-    --warning-foreground: 222 47% 7%;
+    --warning: 38 90% 60%;
+    --warning-foreground: 240 6% 8%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 15%;
-    --ring: 152 76% 50%;
+    --success: 152 55% 55%;
+    --success-foreground: 240 6% 8%;
 
-    --radius: 0.75rem;
+    --border: 240 5% 18%;
+    --input: 240 5% 16%;
+    --ring: 0 0% 80%;
 
-    --gradient-hero: radial-gradient(ellipse at top, hsl(152 76% 50% / 0.12), transparent 60%),
-                     radial-gradient(ellipse at bottom right, hsl(199 89% 55% / 0.08), transparent 60%);
-    --shadow-glow: 0 0 60px -15px hsl(152 76% 50% / 0.45);
-    --shadow-card: 0 8px 32px -8px hsl(222 47% 2% / 0.6);
+    --radius: 0.625rem;
 
-    --_unused: 222.2 84% 4.9%;
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -10%, hsl(0 0% 100% / 0.04), transparent 70%);
+    --shadow-card: 0 1px 0 0 hsl(0 0% 100% / 0.03) inset, 0 8px 24px -12px hsl(0 0% 0% / 0.5);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 6% 7%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 6% 8%;
+    --sidebar-accent: 240 5% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 240 5% 18%;
+    --sidebar-ring: 0 0% 80%;
   }
 
   .dark {
