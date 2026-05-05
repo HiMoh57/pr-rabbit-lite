@@ -41,6 +41,14 @@ A minimal reference implementation built on Supabase Edge Functions and a hosted
 
 ## 🚀 Quick Start
 
+1. You can go onto:
+
+https://pr-rabbit-lite.vercel.app
+
+and test it out on web.
+
+OR
+
 ```bash
 # 1. Clone
 git clone https://github.com/<your-username>/pr-rabbit-lite.git
