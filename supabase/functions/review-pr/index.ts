@@ -7,6 +7,23 @@ const corsHeaders = {
 const SYSTEM_PROMPT = `You are a Senior Staff Engineer performing a code review on a GitHub Pull Request diff.
 Be precise, concise, and actionable. Only flag genuine issues. If none exist for a category, return an empty array.`;
 
+// Simple in-memory IP rate limiter (per edge function instance).
+// Not bulletproof across instances, but enough to prevent casual abuse on a public OSS demo.
+const RATE_LIMIT_MAX = 5; // requests
+const RATE_LIMIT_WINDOW_MS = 60_000; // per minute
+const ipHits = new Map<string, number[]>();
+function rateLimit(ip: string): boolean {
+  const now = Date.now();
+  const hits = (ipHits.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  if (hits.length >= RATE_LIMIT_MAX) {
+    ipHits.set(ip, hits);
+    return false;
+  }
+  hits.push(now);
+  ipHits.set(ip, hits);
+  return true;
+}
+
 function parsePrUrl(url: string) {
   const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/pull\/(\d+)/);
   if (!m) return null;
@@ -17,6 +34,17 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
   try {
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      req.headers.get("cf-connecting-ip") ||
+      "unknown";
+    if (!rateLimit(ip)) {
+      return new Response(
+        JSON.stringify({ error: "Rate limit: max 5 reviews per minute. Please slow down." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
+    }
+
     const { prUrl } = await req.json();
     if (!prUrl || typeof prUrl !== "string") {
       return new Response(JSON.stringify({ error: "prUrl required" }), {
