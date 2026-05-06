@@ -2,14 +2,14 @@
 
 > A simplified, open-source agentic PR reviewer. Paste a public GitHub Pull Request URL — get a Senior Staff Engineer–style review (bugs, security risks, efficiency score) in seconds.
 
+https://github.com/user-attachments/assets/7019d981-a4e7-46e6-8c87-0137eac9a549
+[**Try the Live Demo →**](https://pr-rabbit-lite.vercel.app)
+
 A minimal reference implementation built on Supabase Edge Functions and a hosted LLM gateway.
 
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20Vite%20%2B%20Tailwind-0ea5e9)
 ![Backend](https://img.shields.io/badge/backend-Supabase-3ecf8e)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
-https://github.com/user-attachments/assets/7019d981-a4e7-46e6-8c87-0137eac9a549
-
 
 ---
 
@@ -38,19 +38,19 @@ https://github.com/user-attachments/assets/7019d981-a4e7-46e6-8c87-0137eac9a549
 
 - **Frontend:** React 18 + Vite + Tailwind + shadcn/ui
 - **Backend:** Supabase Edge Function (Deno) — fetches the raw `.diff`, calls the LLM with a forced tool call for structured output
-- **AI:** `google/gemini-2.5-pro` via an OpenAI-compatible gateway (configurable)
+- **AI:** `Powered by Gemini 2.5 Pro` via an OpenAI-compatible gateway (configurable)
+
+---
+
+## 🎯 Why PR-Rabbit-Lite?
+Manual code reviews are the #1 bottleneck in shipping software. `PR-Rabbit-Lite` gives you an instant "first pass" on any public PR, catching:
+- 🪳 **Logic Bugs** that unit tests miss.
+- 🛡️ **Security Risks** before they hit production.
+- 📉 **Efficiency Gains** to keep your codebase lean.
 
 ---
 
 ## 🚀 Quick Start
-
-1. You can go onto:
-
-https://pr-rabbit-lite.vercel.app
-
-and test it out on web.
-
-OR
 
 ```bash
 # 1. Clone
@@ -141,6 +141,10 @@ PRs welcome! Please:
 - [ ] GitHub App integration for auto-comments
 - [ ] Streaming responses
 - [ ] i18n
+
+---
+
+**Enjoying PR-Rabbit-Lite? Give it a ⭐ to help others find it!**
 
 ---
 
