@@ -8,6 +8,9 @@ A minimal reference implementation built on Supabase Edge Functions and a hosted
 ![Backend](https://img.shields.io/badge/backend-Supabase-3ecf8e)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+https://github.com/user-attachments/assets/7019d981-a4e7-46e6-8c87-0137eac9a549
+
+
 ---
 
 ## ✨ Features
