@@ -2,7 +2,9 @@
 
 > A simplified, open-source agentic PR reviewer. Paste a public GitHub Pull Request URL — get a Senior Staff Engineer–style review (bugs, security risks, efficiency score) in seconds.
 
-https://github.com/user-attachments/assets/7019d981-a4e7-46e6-8c87-0137eac9a549
+
+https://github.com/user-attachments/assets/ad845f8d-0674-4ec1-956c-45ce0011e458
+
 [**Try the Live Demo →**](https://pr-rabbit-lite.vercel.app)
 
 A minimal reference implementation built on Supabase Edge Functions and a hosted LLM gateway.
